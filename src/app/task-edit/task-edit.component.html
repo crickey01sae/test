@@ -1,0 +1,30 @@
+<div class="add-task">
+  <div class="form-group">
+    <label>Task Name</label>
+    <input class="form-control" type="text" placeholder="Task Name" #taskName />
+  </div>
+  <div class="form-group">
+    <label>Task Description</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Task Description"
+      #taskDesc
+    />
+  </div>
+  <div class="form-group">
+    <label>Task Status</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Task Status"
+      #taskStatus
+    />
+  </div>
+  <button
+    class="btn btn-success"
+    (click)="onAddTask(taskName.value, taskDesc.value, taskStatus.value)"
+  >
+    Add Task
+  </button>
+</div>

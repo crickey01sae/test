@@ -1,0 +1,13 @@
+<div *ngFor="let item of taskList; let idx = index">
+  <div
+    [ngStyle]="{
+      'margin-top.px': 20,
+      'padding.px': 11
+    }"
+    [appChangeColor]="item.status"
+  >
+    <p [ngStyle]="{ 'font-size.px': 28 }">{{ item.status }}</p>
+    <p [ngStyle]="{ 'font-size.px': 20 }">{{ item.name }}</p>
+    <p>{{ item.description }}</p>
+  </div>
+</div>

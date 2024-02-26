@@ -1,0 +1,59 @@
+<div *ngFor="let item of taskList; let idx = index">
+  <div
+    [ngStyle]="{
+      'margin-top.px': 20,
+      'padding.px': 11
+    }"
+    [appChangeColor]="item.status"
+    *ngIf="item.status == 'To Do'"
+  >
+    <p [ngStyle]="{ 'font-size.px': 28 }">{{ item.status }}</p>
+    <p [ngStyle]="{ 'font-size.px': 20 }">{{ item.name }}</p>
+    <button
+      class="btn btn-primary"
+      [ngStyle]="{ 'margin-right.px': 11 }"
+      (click)="onEditTask(idx)"
+    >
+      Edit
+    </button>
+    <button class="btn btn-danger" (click)="onDeleteTask(idx)">Delete</button>
+  </div>
+  <div
+    [ngStyle]="{
+      'margin-top.px': 20,
+      'padding.px': 11
+    }"
+    [appChangeColor]="item.status"
+    *ngIf="item.status == 'In Progress'"
+  >
+    <p [ngStyle]="{ 'font-size.px': 28 }">{{ item.status }}</p>
+    <p [ngStyle]="{ 'font-size.px': 20 }">{{ item.name }}</p>
+    <button
+      class="btn btn-primary"
+      [ngStyle]="{ 'margin-right.px': 11 }"
+      (click)="onEditTask(idx)"
+    >
+      Edit
+    </button>
+    <button class="btn btn-danger" (click)="onDeleteTask(idx)">Delete</button>
+  </div>
+  <div
+    [ngStyle]="{
+      'margin-top.px': 20,
+      'padding.px': 11
+    }"
+    [appChangeColor]="item.status"
+    *ngIf="item.status == 'Done'"
+  >
+    <p [ngStyle]="{ 'font-size.px': 28 }">{{ item.status }}</p>
+    <p [ngStyle]="{ 'font-size.px': 20 }">{{ item.name }}</p>
+    <button
+      class="btn btn-primary"
+      [ngStyle]="{ 'margin-right.px': 11 }"
+      (click)="onDeleteTask(idx)"
+    >
+      Edit
+    </button>
+    <button class="btn btn-danger" (click)="onDeleteTask(idx)">Delete</button>
+  </div>
+</div>

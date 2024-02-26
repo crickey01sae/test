@@ -1,0 +1,8 @@
+input {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+.add-task {
+  margin-top: 11px;
+}
